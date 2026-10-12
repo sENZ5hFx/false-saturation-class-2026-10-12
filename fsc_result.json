@@ -1,0 +1,116 @@
+{
+  "class": "False-Saturation Class",
+  "acronym": "FSC",
+  "session_id": "2026-10-12T17:40:00Z",
+  "author": "Haley Ann Bird",
+  "agent": "Grok by xAI, structural synthesis aid only, non-ownership",
+  "status": "research-stage classification; not a physical discovery; not peer review; not a patent",
+  "queued_since": "RGC-2026-10-09",
+  "deferred_again_on": "RSC-2026-10-11",
+  "why_this_session": "high-agency-partner rule 7. Older unminted leftover outranks Kind-Substitution, which RSC named and did not mint.",
+  "definition": "A closure label is attached to a coarse or naive channel. A finer channel already inside the same likelihood stays open. The closure is false. If the finer channel is also closed, the closure was true and FSC does not fire.",
+  "not_this": [
+    "Not RGC: RGC is the derivative where the unnamed channel outruns the named one and nobody is required to have declared the census closed.",
+    "Not RSC: RSC is every corner of one same-kind rectangle missing one residual.",
+    "Not DPC: DPC is a construct denominator treated as observed.",
+    "Not the rediscovery of open versus closed pangenomes (Tettelin).",
+    "Not PhyloThin. That method belongs to G\u00f6tsch and Baumdicker.",
+    "Not Kind-Substitution. Queued from RSC-2026-10-11. Not minted here."
+  ],
+  "alpha_equation_threshold": "NOT_RETRIEVED. Scorer uses the preprint's closed/open words. It does not apply Prasoodanan \u03b1 \u2264 0 and does not assume \u03b1 > 1 means closed.",
+  "primary_numbers_retrieved": {
+    "preprint": "10.64898/2026.09.29.755372v1",
+    "peer_review": "none retrieved",
+    "samples": "402 prokaryotic species, 27,070 full genomes reduced to 16,081 effective genomes (59% remain; abstract: effective number 41% lower)",
+    "type_specimen_quote": "Akkermansia muciniphila \u03b1 naive = 1.11 but \u03b1 effective = 0.58 changing its classification from closed to open",
+    "quote_status": "Returned twice by page extraction. PDF bytes not retrieved (HTTP 429). Re-verify before any citation outside this log."
+  },
+  "rows": [
+    {
+      "name": "akkermansia_naive_closed_effective_open",
+      "role": "primary",
+      "verdict": "FSC",
+      "score": 5.824,
+      "failed_gates": [],
+      "source": "G\u00f6tsch & Baumdicker, bioRxiv 10.64898/2026.09.29.755372v1 (preprint). Quoted extraction: Akkermansia muciniphila \u03b1 naive = 1.11, \u03b1 effective = 0.58, classification changes from closed to open. Alpha equation threshold NOT retrieved from the page. PDF bytes returned HTTP 429. Do not re-fit."
+    },
+    {
+      "name": "salmonella_oversampling_without_closure_label",
+      "role": "control",
+      "verdict": "NOT_FSC",
+      "score": 0.0,
+      "failed_gates": [
+        "naive_closed",
+        "closure_reported"
+      ],
+      "source": "Same preprint. Salmonella enterica 86.6% oversampling among species with >70 genomes. No closed-to-open label retrieved for this species."
+    },
+    {
+      "name": "bordetella_low_oversampling_no_closure_label",
+      "role": "control",
+      "verdict": "NOT_FSC",
+      "score": 0.0,
+      "failed_gates": [
+        "naive_closed",
+        "effective_open",
+        "closure_reported"
+      ],
+      "source": "Same preprint. Bordetella pertussis lowest oversampling, 593 effective genomes. No closure flip retrieved. Low bias is not FSC and is not evidence of saturation."
+    },
+    {
+      "name": "praso_archaea_saturated_channel_not_cited_as_census_closure",
+      "role": "control",
+      "verdict": "NOT_FSC",
+      "score": 0.0,
+      "failed_gates": [
+        "closure_reported"
+      ],
+      "source": "Prasoodanan et al., Nat Microbiol 11:1437-1449 (2026), DOI 10.1038/s41564-026-02314-6. Archaeal genome discovery \u03b1 \u2264 0 in several host habitats. Authors refuse to close the unbinned channel. Owned by RGC as the saturation kill, not by FSC."
+    },
+    {
+      "name": "praso_widening_gap_sentence",
+      "role": "control",
+      "verdict": "NOT_FSC",
+      "score": 0.0,
+      "failed_gates": [
+        "naive_closed",
+        "closure_reported"
+      ],
+      "source": "Same paper. Authors say the discovered/discoverable gap will keep widening. That sentence is RGC's primary, not a closure."
+    }
+  ],
+  "unit_gates_not_specimens": {
+    "both_channels_closed": {
+      "score": 0.0,
+      "failed_gates": [
+        "effective_open"
+      ]
+    },
+    "later_technology_not_same_likelihood": {
+      "score": 0.0,
+      "failed_gates": [
+        "same_likelihood"
+      ]
+    },
+    "no_closure_sentence": {
+      "score": 0.0,
+      "failed_gates": [
+        "closure_reported"
+      ]
+    }
+  },
+  "controls_ok": true,
+  "primary_score": 5.824,
+  "novelty_cap": 0.27,
+  "novelty_cap_reason": "Tettelin open/closed pangenomes, reviews that sampling bias flattens accumulation curves, and this preprint's own sentence already state the Akkermansia flip. RGC owns discovery-coefficient saturation. Cap is the cross-archive kill rule plus the same-likelihood gate, not the preprint's result.",
+  "coherence": 0.78,
+  "coherence_reason": "41% and 27,070 to 16,081 agree across abstract and full-text extraction. The alpha threshold equation was not retrieved. One specimen. Preprint.",
+  "kill": "If the effective channel for Akkermansia is also closed under the preprint's own definition, or the quoted alphas are not in the PDF, this instance dies. If a later census shows the naive closed label and the effective open label were different species or different datasets, same_likelihood fails and the instance dies. FSC as a test can be reused.",
+  "leftover_not_minted": {
+    "name": "Kind-Substitution",
+    "from": "RSC-2026-10-11",
+    "reason": "Dropping a retention or kind axis can manufacture a reversal that the rectangle does not contain. Different kill. Older FSC queue was finished first. Do not mint Kind-Substitution in this session."
+  },
+  "prompt_sha256": "eff49879598ee4a9806513fd169159eb7de26809f7750a6989e85f95f4b809d6",
+  "sha256": "0c158d47e9b9d239897e755036dda65c86f32072469b44eddb0d7230bc0b3017"
+}
